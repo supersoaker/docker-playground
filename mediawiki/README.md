@@ -5,7 +5,7 @@ Context: /var/www/mediawiki
 ####Docker compose
 **1**. Make sure "main-mysql" is running
 ```bash
-cker-compose -f ../mysql/docker-compose.yml up
+docker-compose -f ../mysql/docker-compose.yml up
 ```
 **2**. Execute media wikis docker compose
 ```bash
