@@ -18,8 +18,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "superwiki";
-$wgMetaNamespace = "Superwiki";
+$wgSitename = "Testwiki";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -53,10 +52,10 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "some-mysql";
+$wgDBserver = "main-mysql";
 $wgDBname = "media_wiki";
 $wgDBuser = "root";
-$wgDBpassword = "my-secret-pw";
+$wgDBpassword = "123456";
 
 # MySQL specific settings
 $wgDBprefix = "mw_";
@@ -73,7 +72,7 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -99,11 +98,11 @@ $wgShellLocale = "C.UTF-8";
 # Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = "de";
 
-$wgSecretKey = "278662d4291aa10d5727f36002fc71319cb374147341f2dab9167b1d01ba5813";
+$wgSecretKey = "fb9ae54f68168abc8fc5d3dd81146b66b1c212c5b4ca4fe4e0014bd52fdc2720";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "45c843a9ba8f9b0d";
+$wgUpgradeKey = "2ec09ed7936683bd";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
@@ -118,10 +117,12 @@ $wgDiff3 = "/usr/bin/diff3";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
-$wgDefaultSkin = "vector";
+require_once( "$IP/skins/bootstrap-mediawiki/bootstrap-mediawiki.php" );
+$wgDefaultSkin = "bootstrapmediawiki";
 
 # Enabled skins.
 # The following skins were automatically enabled:
+require_once "$IP/skins/bootstrap-mediawiki/bootstrap-mediawiki.php";
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
 require_once "$IP/skins/Modern/Modern.php";
 require_once "$IP/skins/MonoBook/MonoBook.php";
