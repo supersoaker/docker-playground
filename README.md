@@ -4,7 +4,7 @@ For using this playground just execute:
 ```bash
 git clone https://github.com/supersoaker/docker-playground.git /var/docker
 ```
-To start mediawiki just execute the following lines:
+To start mediawiki execute the following lines:
 ```bash
 cd /var/docker
 docker-compose -f mysql/docker-compose.yml up -d
