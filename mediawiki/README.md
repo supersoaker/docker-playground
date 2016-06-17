@@ -37,3 +37,5 @@ docker run --name mediawiki --link mysql:mysql -p 8080:80 -v /var/docker/mediawi
 cat /home/parallels/Downloads/LocalSettings.php | sudo docker exec -i mediawiki sh -c 'cat > /var/www/html/LocalSettings.php'
 ```
 
+###Tipps & Tricks
+Bootstrap Theme = <https://github.com/borkweb/bootstrap-mediawiki>
