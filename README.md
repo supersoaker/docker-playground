@@ -9,6 +9,7 @@ cd /var/docker
 docker-compose -f mysql/docker-compose.yml up -d
 docker-compose -f mediawiki/docker-compose.yml up -d
 ```
+and go to <http://localhost:8080>
 
 Normal server file structure:
 ```
