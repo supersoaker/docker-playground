@@ -1,6 +1,20 @@
 #MediaWiki
 from <https://www.mediawiki.org/>
+###Usage
+####Docker compose
+1. Make sure "main-mysql" is running and execute
+```bash
+docker-compose up -d
+```
+2. Just configure Media wiki on <http://localhost:8080/>
+  - Database host = "main-mysql"
+  - Database pass = "123456"
+3. Download the LocalSettings.php and put it into the file volume
+```bash
+cat /home/parallels/Downloads/LocalSettings.php | sudo docker exec -i mediawiki-web sh -c 'cat > /var/www/html/LocalSettings.php'
+```
 
+####Docker only (in german)
 ```bash
 docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql/mysql-server:latest
 ```
