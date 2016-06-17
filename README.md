@@ -1,5 +1,10 @@
 # docker-playground
-Server file structure:
+For using this playground just execute:
+```bash
+git clone https://github.com/supersoaker/docker-playground.git /var/docker
+```
+
+Normal server file structure:
 ```
 - /var/docker
      - /mediawiki
