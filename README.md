@@ -1,4 +1,5 @@
 # docker-playground
+### Usage
 For using this playground just execute:
 ```bash
 git clone https://github.com/supersoaker/docker-playground.git /var/docker
@@ -11,13 +12,15 @@ docker-compose -f mediawiki/docker-compose.yml up -d
 ```
 and go to <http://localhost:8080>
 
-Normal server file structure:
+###File structure:
 ```
 - /var/docker
      - /mediawiki
           - /www                # file volume for media wiki
           - docker-compose.yml  # configuration file for docker-compose
-     - /gitlab
-          - /www                # file volume for gitlab
+     - /mysql
+          - /data               # file volume for mysql data
+          - docker-compose.yml  # configuration file for docker-compose
+     - /phpmyadmin
           - docker-compose.yml  # configuration file for docker-compose
 ```
