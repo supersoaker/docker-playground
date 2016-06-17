@@ -3,15 +3,15 @@ from <https://www.mediawiki.org/>
 ###Usage
 Context: /var/www/mediawiki
 ####Docker compose
-1. Make sure "main-mysql" is running 
-2. Execute media wikis docker compose
+- Make sure "main-mysql" is running 
+- Execute media wikis docker compose
 ```bash
 docker-compose up -d
 ```
-3. Configure Media wiki on <http://localhost:8080/>
+- Configure Media wiki on <http://localhost:8080/>
   - Database host = "main-mysql"
   - Database pass = "123456"
-4. Download the LocalSettings.php and put it into the file volume
+- Download the LocalSettings.php and put it into the file volume
 ```bash
 cat ~/Downloads/LocalSettings.php | sudo docker exec -i mediawiki-web sh -c 'cat > /var/www/html/LocalSettings.php'
 ```
