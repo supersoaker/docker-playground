@@ -1,12 +1,13 @@
 web:
+  container_name: mediawiki-web
   image: synctree/mediawiki
   ports:
     - 8080:80
   external_links:
-    - some-mysql:mysql
+    - main-mysql:mysql
   volumes:
     - /var/docker/mediawiki/www:/var/www/html
   environment:
-    - MEDIAWIKI_SITE_SERVER=//localhost
-    - MEDIAWIKI_SITE_NAME=Marlons Superwiki
-    - MEDIAWIKI_DB_PASSWORD=my-secret-pw
+#    - MEDIAWIKI_SITE_SERVER=//localhost
+#    - MEDIAWIKI_SITE_NAME=Marlons Superwiki
+    - MEDIAWIKI_DB_PASSWORD=123456
