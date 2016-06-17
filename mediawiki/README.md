@@ -1,5 +1,5 @@
 #MediaWiki
-from <https://www.mediawiki.org/wiki/MediaWiki>
+from <https://www.mediawiki.org/>
 
 ```bash
 docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql/mysql-server:latest
