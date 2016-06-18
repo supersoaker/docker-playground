@@ -1,4 +1,5 @@
 # docker-playground
+![alt tag](http://engineering.viki.com/images/blog/docker_all_the_things.jpg)
 ### Usage
 For using this playground just execute:
 ```bash
